@@ -1,0 +1,6 @@
+{
+  "application":  {
+    "path": "c:\\Downloads\\Addressbook\\AddressBook.exe",
+    "main_window": "Free Address Book"
+  }
+}
