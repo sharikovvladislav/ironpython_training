@@ -16,23 +16,15 @@ from System.Windows.Automation import *
 
 from fixture.group import GroupHelper
 
-
-
-class Application:
-    def __init__(self, path, name_window):
-        self.app = Application.Launch(path)
-        self.main_window = self.app.GetWindow(name_window)
+class Application_Window:
+    def __init__(self, path, window):
+        application = Application.Launch(path)
+        main_window = application.GetWindow(window)
+        self.main_window = main_window
         self.group = GroupHelper(self)
 
     def destroy(self):
-        self.app.Get(SearchCriteria.ByAutomationId("uxExitAddressButton")).Click()
+        self.main_window.Get(SearchCriteria.ByAutomationId("uxExitAddressButton")).Click()
 
 
 
-class Application
-
-    def __init__(self):
-        self.appl =
-
-    def open_application(self):
-        application = Application.Launch("c:\\Downloads\\Addressbook\\AddressBook.exe")

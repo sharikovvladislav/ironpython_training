@@ -7,7 +7,7 @@ import sys
 import time
 
 import clr
-clr.AddReferenceByName('Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c')
+clr.AddReferenceByName('Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c')
 from Microsoft.Office.Interop import Excel
 
 try:
@@ -16,7 +16,7 @@ except getopt.GetoptError as err:
     getopt.usage()
     sys.exit(2)
 
-number = 2
+number = 5
 file = "data/groups.xlsx"
 
 for o, a in opts:
