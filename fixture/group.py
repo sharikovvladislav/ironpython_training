@@ -37,7 +37,9 @@ class GroupHelper:
         modal = self.open_group_editor()
         modal.Get(SearchCriteria.ByText("%s" % group)).Click()
         modal.Get(SearchCriteria.ByAutomationId("uxDeleteAddressButton")).Click()
+        modal.Get(SearchCriteria.ByAutomationId("uxDeleteAllRadioButton")).Click()
         modal.Get(SearchCriteria.ByAutomationId("uxOKAddressButton")).Click()
+
         self.close_group_editor(modal)
 
     def get_group_list(self):
